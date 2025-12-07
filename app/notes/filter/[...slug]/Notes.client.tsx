@@ -20,7 +20,6 @@ export default function NotesClient({ paramTag }: NotesClientProps) {
   const [page, setPage] = useState(1);
   const [query, setNewQuery] = useState("");
   const [isModalOpen, setIsModalOpen] = useState(false);
-
   const { data, isLoading } = useQuery({
     queryKey: ["notes", page, query, paramTag],
     queryFn: () =>

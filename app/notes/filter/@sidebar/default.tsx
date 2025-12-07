@@ -31,7 +31,7 @@ export default async function SidebarNotes() {
       </li>
       <li className={css.menuItem}>
         <Link href={`/notes/filter/Todo`} className={css.menuLink}>
-          ToDo
+          Todo
         </Link>
       </li>
     </ul>
