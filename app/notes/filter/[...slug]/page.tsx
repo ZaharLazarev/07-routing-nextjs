@@ -8,12 +8,12 @@ import NotesClient from "./Notes.client";
 
 interface NotesProps {
   params: Promise<{
-    tag?: string[];
+    slug?: string[];
   }>;
 }
 
 export default async function NotesByTag({ params }: NotesProps) {
-  const tag = (await params).tag?.[0];
+  const tag = (await params).slug?.[0];
   const queryClient = new QueryClient();
   await queryClient.prefetchQuery({
     queryKey: ["notes", 1, "", tag],
